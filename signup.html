@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            transition: background-color 0.5s ease;
+        }
+
+        .login-container {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            color: #fff;
+        }
+
+        .login-form {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .forgot-password {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .forgot-password:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<>
+
+<div class="login-container">
+    <h2>Login Form</h2>
+    <form class="login-form" action="#" method="post">
+    <form on submit="event.prevent default()">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Login">
+        </div>
+        <button onclick="signup()">register</button>
+    </form>
+    </form>
+    <a class="forgot-password" href="#">Forgot Password?</a>
+</div>
+<script>
+    // JavaScript for changing background color
+    document.body.addEventListener("click", function() {
+        document.body.style.backgroundColor = getRandomColor();
+    });
+
+    function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+</script>
+
+
+
+
+
+<script src=" https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+<script src=" https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+<script src=" https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+<script src="./scripts/firebase.js"></script>
+<script src="./scripts/auth.js"></script>
+
+
+
+
+
+</body>
+</html>
